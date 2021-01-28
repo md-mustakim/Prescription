@@ -1,11 +1,17 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Home from "../views/Home.vue";
+
+import Prescription from "@/components/Prescription";
 
 const routes = [
   {
     path: "/",
-    name: "Home",
-    component: Home
+    redirect: "/Prescription"
+  },
+
+  {
+    path: "/Prescription",
+    name: "Prescription",
+    component: Prescription
   },
   {
     path: "/about",
@@ -22,5 +28,7 @@ const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
 });
+
+
 
 export default router;

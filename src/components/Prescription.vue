@@ -25,7 +25,7 @@
             </div>
           </div>
           <div
-            class="col-3 border-right border-bottom"
+            class="col-3 border-right border-bottom pt-3"
             style="min-height: 70vh;"
           >
             <u><b>Symptoms of Disease</b></u>
@@ -47,14 +47,26 @@
               <input
                 type="text"
                 id="disease"
-                class="form-control"
+                class="form-control shadow"
                 v-model="disease"
+                placeholder="Symptoms"
                 @keyup.enter="addToList"
               />
             </label>
           </div>
-          <div class="col-9 border-bottom">
-            medicine
+          <div class="col-9 border-bottom text-left">
+            <div class="mt-3">
+              <span class="font-weight-bold h2"><i>R</i></span
+              ><sub class="h5">x</sub>
+            </div>
+            <div class="mt-3">
+              <label>
+                <textarea
+                  class="form-control shadow"
+                  placeholder="Doctor's Advised Medicine"
+                ></textarea>
+              </label>
+            </div>
           </div>
           <div class="col-12">
             <PrescriptionFooter />
